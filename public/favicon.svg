@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Favicon provisoire : deux sommets stylisés -->
+  <path fill="#5b7f95" d="M1 28 12 9l7 12z"/>
+  <path fill="#2f4858" d="M9 28 20 6l11 22z"/>
+  <path fill="#f4f6f8" d="M20 6l3.5 7-2-1.2-1.5 1.7-1.5-1.7-2 1.2z"/>
+</svg>

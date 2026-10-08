@@ -1,0 +1,81 @@
+{
+  "etages": [
+    { "id": "forestier", "nom": "Étage forestier" },
+    { "id": "subalpin", "nom": "Étage subalpin" },
+    { "id": "alpin", "nom": "Étage alpin" }
+  ],
+  "animaux": [
+    {
+      "id": "desman-des-pyrenees",
+      "nom": "Desman des Pyrénées",
+      "nomScientifique": "Galemys pyrenaicus",
+      "etage": "forestier",
+      "illustration": "desman-des-pyrenees.svg",
+      "description": "",
+      "anecdote": ""
+    },
+    {
+      "id": "euprocte-des-pyrenees",
+      "nom": "Euprocte des Pyrénées",
+      "nomScientifique": "Calotriton asper",
+      "etage": "forestier",
+      "illustration": "euprocte-des-pyrenees.svg",
+      "description": "",
+      "anecdote": ""
+    },
+    {
+      "id": "ours-brun",
+      "nom": "Ours brun",
+      "nomScientifique": "Ursus arctos",
+      "etage": "forestier",
+      "illustration": "ours-brun.svg",
+      "description": "",
+      "anecdote": ""
+    },
+    {
+      "id": "grand-tetras",
+      "nom": "Grand tétras",
+      "nomScientifique": "Tetrao urogallus",
+      "etage": "subalpin",
+      "illustration": "grand-tetras.svg",
+      "description": "",
+      "anecdote": ""
+    },
+    {
+      "id": "marmotte",
+      "nom": "Marmotte des Alpes",
+      "nomScientifique": "Marmota marmota",
+      "etage": "subalpin",
+      "illustration": "marmotte.svg",
+      "description": "",
+      "anecdote": ""
+    },
+    {
+      "id": "isard",
+      "nom": "Isard",
+      "nomScientifique": "Rupicapra pyrenaica",
+      "etage": "alpin",
+      "illustration": "isard.svg",
+      "description": "",
+      "anecdote": ""
+    },
+    {
+      "id": "gypaete-barbu",
+      "nom": "Gypaète barbu",
+      "nomScientifique": "Gypaetus barbatus",
+      "etage": "alpin",
+      "illustration": "gypaete-barbu.svg",
+      "description": "",
+      "anecdote": ""
+    },
+    {
+      "id": "lagopede-alpin",
+      "nom": "Lagopède alpin",
+      "nomScientifique": "Lagopus muta",
+      "etage": "alpin",
+      "illustration": "lagopede-alpin.svg",
+      "description": "",
+      "anecdote": ""
+    }
+  ]
+}

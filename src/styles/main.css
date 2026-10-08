@@ -1,0 +1,21 @@
+/* Feuille de style principale.
+   Pour l'instant : seulement une base neutre. Le vrai design viendra à l'étape suivante. */
+
+/* Les largeurs incluent les bordures et marges intérieures (plus simple à calculer) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Centre le titre au milieu de l'écran, le temps de vérifier que tout fonctionne */
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
