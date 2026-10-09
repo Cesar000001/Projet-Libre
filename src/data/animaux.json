@@ -1,81 +1,220 @@
 {
+  "montagne": {
+    "nom": "Pic d'Aneto",
+    "altitudeDepart": 500,
+    "altitudeSommet": 3404,
+    "sources": ["https://en.wikipedia.org/wiki/Aneto"]
+  },
   "etages": [
-    { "id": "forestier", "nom": "Étage forestier" },
-    { "id": "subalpin", "nom": "Étage subalpin" },
-    { "id": "alpin", "nom": "Étage alpin" }
+    {
+      "id": "collineen",
+      "nom": "Étage collinéen",
+      "altitudeMin": 500,
+      "altitudeMax": 900,
+      "paysage": "Plaine, champs, prairies et bois de feuillus (chênes, châtaigniers, charmes)"
+    },
+    {
+      "id": "montagnard",
+      "nom": "Étage montagnard",
+      "altitudeMin": 900,
+      "altitudeMax": 1600,
+      "paysage": "Forêts de hêtres et de sapins, torrents"
+    },
+    {
+      "id": "subalpin",
+      "nom": "Étage subalpin",
+      "altitudeMin": 1600,
+      "altitudeMax": 2300,
+      "paysage": "Forêt claire de pins à crochets, landes de rhododendrons, alpages"
+    },
+    {
+      "id": "alpin",
+      "nom": "Étage alpin",
+      "altitudeMin": 2300,
+      "altitudeMax": 3000,
+      "paysage": "Pelouses d'altitude, rochers et éboulis"
+    },
+    {
+      "id": "nival",
+      "nom": "Étage nival",
+      "altitudeMin": 3000,
+      "altitudeMax": 3404,
+      "paysage": "Neige, glace et rochers jusqu'au sommet"
+    }
+  ],
+  "sourcesEtages": [
+    "https://www.lonelyplanet.fr/destinations/france/pyrenees/environnement",
+    "https://fr.vikidia.org/wiki/%C3%89tagement_de_la_v%C3%A9g%C3%A9tation_en_montagne"
   ],
   "animaux": [
+    {
+      "id": "campagnol-des-pyrenees",
+      "nom": "Campagnol des Pyrénées",
+      "nomScientifique": "Microtus gerbei",
+      "etage": "collineen",
+      "altitude": { "min": null, "max": null },
+      "lieuDeVie": "Prairies, cultures et landes. Il vit surtout en moyenne montagne mais descend aussi plus bas. On ne le trouve que dans le centre et le sud-ouest de la France et le nord de l'Espagne.",
+      "alimentation": "",
+      "anecdotes": [],
+      "illustration": "campagnol-des-pyrenees.svg",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gerbe%27s_vole",
+        "https://eunis.eea.europa.eu/species/11286",
+        "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/temas/inventarios-nacionales/ieet_mami_microtus_gerbei_tcm30-99828.pdf"
+      ]
+    },
     {
       "id": "desman-des-pyrenees",
       "nom": "Desman des Pyrénées",
       "nomScientifique": "Galemys pyrenaicus",
-      "etage": "forestier",
+      "etage": "montagnard",
+      "altitude": { "min": 15, "max": 2600 },
+      "lieuDeVie": "Rivières et torrents au courant rapide et à l'eau propre, parfois lacs d'altitude. Il s'abrite dans les cavités des berges, entre les pierres et les racines.",
+      "alimentation": "Larves d'insectes aquatiques et petits crustacés qu'il déniche au fond de l'eau grâce à sa trompe.",
+      "anecdotes": [],
       "illustration": "desman-des-pyrenees.svg",
-      "description": "",
-      "anecdote": ""
+      "sources": [
+        "https://inpn.mnhn.fr/espece/cd_nom/60243",
+        "https://ofb.gouv.fr/actualites/sur-les-traces-du-desman-des-pyrenees"
+      ]
     },
     {
       "id": "euprocte-des-pyrenees",
       "nom": "Euprocte des Pyrénées",
       "nomScientifique": "Calotriton asper",
-      "etage": "forestier",
+      "etage": "montagnard",
+      "altitude": { "min": 360, "max": 3000 },
+      "lieuDeVie": "Torrents froids et bien oxygénés à fond rocheux, lacs de montagne et grottes. Son habitat idéal : les torrents en pente forte entre 750 et 1 500 m.",
+      "alimentation": "Vers, petits crustacés comme les gammares, et mollusques.",
+      "anecdotes": [],
       "illustration": "euprocte-des-pyrenees.svg",
-      "description": "",
-      "anecdote": ""
+      "sources": [
+        "https://www.futura-sciences.com/planete/definitions/zoologie-euprocte-pyrenees-7004/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6071966/",
+        "https://amphibiaweb.org/species/4251"
+      ]
     },
     {
       "id": "ours-brun",
       "nom": "Ours brun",
       "nomScientifique": "Ursus arctos",
-      "etage": "forestier",
+      "etage": "montagnard",
+      "altitude": { "min": null, "max": null },
+      "lieuDeVie": "Surtout la forêt de hêtres et de sapins, qui lui sert d'abri et de garde-manger. Selon les saisons, il descend en fond de vallée ou monte dans les alpages.",
+      "alimentation": "Omnivore à dominante végétale (environ 70 à 80 % de végétaux) : fruits, myrtilles, glands, faînes, herbes, mais aussi insectes et cadavres d'animaux.",
+      "anecdotes": [],
       "illustration": "ours-brun.svg",
-      "description": "",
-      "anecdote": ""
+      "sources": [
+        "https://www.ferus.fr/wp-content/uploads/2019/08/plaquette-ours-2019.pdf",
+        "https://www.prefectures-regions.gouv.fr/occitanie/Region-et-institutions/L-action-de-l-Etat/Massif-des-Pyrenees/L-ours-brun-d-Europe"
+      ]
     },
     {
       "id": "grand-tetras",
       "nom": "Grand tétras",
       "nomScientifique": "Tetrao urogallus",
       "etage": "subalpin",
+      "altitude": { "min": 600, "max": 2400 },
+      "lieuDeVie": "Forêts claires et âgées de conifères, comme la forêt de pins à crochets du subalpin, avec un sol riche en myrtilliers.",
+      "alimentation": "En hiver, presque uniquement des aiguilles de pin à crochets et de sapin. Le reste de l'année, beaucoup de myrtilles.",
+      "anecdotes": [],
       "illustration": "grand-tetras.svg",
-      "description": "",
-      "anecdote": ""
+      "sources": [
+        "https://inpn.mnhn.fr/docs-web/docs/download/441069",
+        "https://www.inrae.fr/sites/default/files/pdf/Oiseaux%20et%20CC.pdf"
+      ]
     },
     {
       "id": "marmotte",
       "nom": "Marmotte des Alpes",
       "nomScientifique": "Marmota marmota",
       "etage": "subalpin",
+      "altitude": { "min": 1450, "max": 2900 },
+      "lieuDeVie": "Prairies d'altitude au-dessus de la forêt, le plus souvent entre 1 800 et 2 400 m. Elle creuse de grands terriers. Disparue des Pyrénées, elle y a été réintroduite à partir de 1948.",
+      "alimentation": "Herbivore : herbes, plantes, bourgeons, baies et graines.",
+      "anecdotes": [],
       "illustration": "marmotte.svg",
-      "description": "",
-      "anecdote": ""
+      "sources": [
+        "https://conservationevidencejournal.com/individual-study/7394",
+        "https://www.futura-sciences.com/planete/actualites/developpement-durable-marmotte-alpes-porte-bien-pyrenees-22965/",
+        "https://en.wikipedia.org/wiki/Alpine_marmot"
+      ]
     },
     {
       "id": "isard",
       "nom": "Isard",
       "nomScientifique": "Rupicapra pyrenaica",
       "etage": "alpin",
+      "altitude": { "min": 600, "max": 2500 },
+      "lieuDeVie": "Pelouses d'altitude, rochers et éboulis au-dessus de la forêt. L'été, il monte jusqu'à environ 2 500 m ; quand la neige s'accumule, il redescend en forêt.",
+      "alimentation": "Herbivore : plantes herbacées, jeunes pousses, bourgeons et lichens.",
+      "anecdotes": [],
       "illustration": "isard.svg",
-      "description": "",
-      "anecdote": ""
-    },
-    {
-      "id": "gypaete-barbu",
-      "nom": "Gypaète barbu",
-      "nomScientifique": "Gypaetus barbatus",
-      "etage": "alpin",
-      "illustration": "gypaete-barbu.svg",
-      "description": "",
-      "anecdote": ""
+      "sources": [
+        "https://piau-engaly.com/wp-content/uploads/2026/01/Isard_fr-1.pdf",
+        "https://pyrenees-parcnational.fr/sites/pyrenees-parcnational.fr/files/available_docs/suivi-isard-parc_national_des_pyrenees.pdf"
+      ]
     },
     {
       "id": "lagopede-alpin",
       "nom": "Lagopède alpin",
       "nomScientifique": "Lagopus muta",
       "etage": "alpin",
+      "altitude": { "min": null, "max": null },
+      "lieuDeVie": "Milieux ouverts de haute altitude. Les Pyrénées sont la limite sud de son aire de répartition dans le monde. En hiver, son plumage devient presque entièrement blanc.",
+      "alimentation": "Presque végétarien : myrtilles, baies et plantes d'altitude l'été ; bourgeons et rameaux qui dépassent de la neige l'hiver.",
+      "anecdotes": [],
       "illustration": "lagopede-alpin.svg",
-      "description": "",
-      "anecdote": ""
+      "sources": [
+        "https://www.vanoise-parcnational.fr/sites/vanoise-parcnational.fr/files/2024-03/Le%20lagop%C3%A8de%20alpin%20et%20le%20changement%20climatique.pdf",
+        "https://areq.net/lang/fr/Lagop%C3%A8de_alpin.html",
+        "https://www.futura-sciences.com/planete/photos/animaux-rois-camouflage-hivernal-diaporama-couper-souffle-2402/"
+      ]
+    },
+    {
+      "id": "gypaete-barbu",
+      "nom": "Gypaète barbu",
+      "nomScientifique": "Gypaetus barbatus",
+      "etage": "alpin",
+      "altitude": { "min": 900, "max": 2550 },
+      "lieuDeVie": "Reliefs escarpés : falaises pour nicher (nids dans de grandes cavités entre 900 et 2 550 m), espaces ouverts pour repérer les carcasses et pierriers pour casser les os.",
+      "alimentation": "Presque uniquement des os de carcasses d'ongulés. Il les lâche de haut sur les rochers pour les briser et manger la moelle.",
+      "anecdotes": [],
+      "illustration": "gypaete-barbu.svg",
+      "sources": [
+        "https://inpn.mnhn.fr/docs-web/docs/download/441085",
+        "https://www.vanoise-parcnational.fr/sites/vanoise-parcnational.fr/files/2024-06/Gypaete%20barbu.pdf"
+      ]
+    },
+    {
+      "id": "campagnol-des-neiges",
+      "nom": "Campagnol des neiges",
+      "nomScientifique": "Chionomys nivalis",
+      "etage": "nival",
+      "altitude": { "min": null, "max": null },
+      "lieuDeVie": "Zones rocheuses et éboulis au-dessus de la limite des arbres, jusqu'au sommet des grands massifs. Il s'abrite sous les blocs et dans les fissures.",
+      "alimentation": "",
+      "anecdotes": [],
+      "illustration": "campagnol-des-neiges.svg",
+      "sources": [
+        "https://en.wikipedia.org/wiki/European_snow_vole",
+        "https://inpn.mnhn.fr/espece/cd_nom/61283"
+      ]
+    },
+    {
+      "id": "chocard-a-bec-jaune",
+      "nom": "Chocard à bec jaune",
+      "nomScientifique": "Pyrrhocorax graculus",
+      "etage": "nival",
+      "altitude": { "min": null, "max": 4000 },
+      "lieuDeVie": "Haute montagne, jusqu'à 4 000 m. Il niche sur les parois rocheuses, les corniches et dans les crevasses ; l'hiver, il descend vers les vallées.",
+      "alimentation": "Omnivore et opportuniste : il n'hésite pas à chaparder les restes des randonneurs près des refuges.",
+      "anecdotes": [],
+      "illustration": "chocard-a-bec-jaune.svg",
+      "sources": [
+        "https://inpn.mnhn.fr/espece/cd_nom/4485",
+        "https://fr.vikidia.org/wiki/Chocard_%C3%A0_bec_jaune"
+      ]
     }
   ]
 }
