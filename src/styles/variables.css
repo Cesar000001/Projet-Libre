@@ -1,0 +1,41 @@
+/* Variables globales : la palette de couleurs et les polices du site.
+   Chaque couleur a trois tons (clair, normal, foncé) : en illustration "flat",
+   on crée le relief avec ces aplats plutôt qu'avec des dégradés. */
+
+:root {
+  /* Ciel : du plus clair (horizon) au plus soutenu (haute altitude) */
+  --ciel-clair: #CDEEFF;
+  --ciel: #8FD3FE;
+  --ciel-fonce: #4BB4F0;
+
+  /* Nuages et neige : un blanc doux, avec une ombre bleutée */
+  --nuage: #FFFDF8;
+  --nuage-ombre: #E3F0FA;
+
+  /* Herbe : prairies, arbres, feuillages */
+  --herbe-clair: #A6E35A;
+  --herbe: #5CC93B;
+  --herbe-fonce: #2E9E44;
+
+  /* Champs : cultures de la plaine, fleurs, soleil */
+  --champ-clair: #FFF1A6;
+  --champ: #FFD93D;
+  --champ-fonce: #F4B400;
+
+  /* Roche : falaises, rochers, grottes */
+  --roche-clair: #C3CAD6;
+  --roche: #8F99AB;
+  --roche-fonce: #5E6880;
+
+  /* Accent : bulles « ? » et boutons, pour ressortir sur le vert et le bleu */
+  --accent: #FF7B54;
+  --accent-fonce: #E8572F;
+
+  /* Texte : bleu nuit, lisible sur toutes les couleurs claires de la palette */
+  --texte: #1F3347;
+  --texte-doux: #4A5D70;
+
+  /* Polices : provisoires, en attendant le choix final */
+  --police-titre: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --police-texte: system-ui, 'Segoe UI', Roboto, sans-serif;
+}

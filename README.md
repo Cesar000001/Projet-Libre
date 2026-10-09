@@ -16,3 +16,5 @@ npm run dev     # lance le site en local
 Ouvre ensuite l'adresse affichée dans le terminal (en général http://localhost:5173).
 
 Pour générer la version en ligne du site : `npm run build` (le résultat est dans `dist/`).
+
+La charte graphique (couleurs et polices) est visible pendant le développement à l'adresse `/charte-graphique.html`.

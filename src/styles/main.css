@@ -1,5 +1,6 @@
 /* Feuille de style principale.
-   Pour l'instant : seulement une base neutre. Le vrai design viendra à l'étape suivante. */
+   Les couleurs et les polices viennent de variables.css (à importer en premier). */
+@import './variables.css';
 
 /* Les largeurs incluent les bordures et marges intérieures (plus simple à calculer) */
 *,
@@ -10,7 +11,14 @@
 
 body {
   margin: 0;
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--police-texte);
+  color: var(--texte);
+  /* Fond provisoire : le ciel, plus clair vers l'horizon */
+  background: linear-gradient(to bottom, var(--ciel), var(--ciel-clair));
+}
+
+h1 {
+  font-family: var(--police-titre);
 }
 
 /* Centre le titre au milieu de l'écran, le temps de vérifier que tout fonctionne */

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Charte graphique · Le Bestiaire des Pyrénées</title>
+
+    <!-- Polices à comparer, chargées depuis Google Fonts (uniquement pour cette page de travail) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Fredoka:wght@400..700&family=Grandstander:wght@400..800&family=Lilita+One&family=Nunito:wght@400..800&display=swap"
+    />
+  </head>
+  <body>
+    <header class="entete">
+      <h1>Charte graphique</h1>
+      <p>
+        Page de travail du Bestiaire des Pyrénées : elle sert à choisir les couleurs et les polices.
+        Elle ne fait pas partie du site final.
+      </p>
+    </header>
+
+    <main>
+      <!-- 1. Palette : les pastilles sont générées par charte-graphique.js à partir de variables.css -->
+      <section class="section">
+        <h2>Couleurs</h2>
+        <div id="palette" class="palette"></div>
+      </section>
+
+      <!-- 2. Aperçu : un mini-paysage en aplats pour voir les couleurs ensemble -->
+      <section class="section">
+        <h2>Aperçu du paysage</h2>
+        <svg class="scene" viewBox="0 0 800 360" role="img" aria-label="Mini-paysage : plaine, chalet, montagnes enneigées, nuages et soleil">
+          <defs>
+            <!-- Forme de nuage réutilisée plusieurs fois -->
+            <g id="forme-nuage">
+              <circle cx="170" cy="95" r="22" />
+              <circle cx="202" cy="78" r="32" />
+              <circle cx="236" cy="95" r="22" />
+              <rect x="170" y="95" width="66" height="22" />
+            </g>
+          </defs>
+
+          <rect class="s-ciel" width="800" height="360" />
+          <circle class="s-soleil" cx="690" cy="72" r="38" />
+
+          <!-- Montagne du fond -->
+          <polygon class="s-roche-clair" points="380,360 560,90 760,360" />
+          <polygon class="s-nuage" points="560,90 590,130 575,124 562,136 548,124 533,130" />
+
+          <!-- Montagne principale : une face éclairée, une face à l'ombre -->
+          <polygon class="s-roche" points="120,360 380,60 640,360" />
+          <polygon class="s-roche-fonce" points="380,60 640,360 470,360" />
+          <polygon class="s-nuage" points="380,60 428,115 410,108 395,122 380,110 365,124 350,108 332,115" />
+
+          <!-- Nuages : la forme en ombre bleutée, puis la même forme blanche légèrement au-dessus -->
+          <use href="#forme-nuage" class="s-nuage-ombre" />
+          <use href="#forme-nuage" class="s-nuage" y="-6" />
+          <use href="#forme-nuage" class="s-nuage-ombre" transform="translate(400 12) scale(0.75)" />
+          <use href="#forme-nuage" class="s-nuage" transform="translate(400 6) scale(0.75)" />
+
+          <!-- Colline du fond, sapins et chalet -->
+          <path class="s-herbe-clair" d="M0 290 C 150 240, 300 250, 430 285 C 560 320, 680 250, 800 260 L800 360 L0 360 Z" />
+          <polygon class="s-herbe-fonce" points="262,228 276,262 248,262" />
+          <polygon class="s-herbe-fonce" points="290,216 306,262 274,262" />
+          <polygon class="s-herbe-fonce" points="712,232 726,268 698,268" />
+          <rect class="s-nuage" x="128" y="248" width="40" height="30" />
+          <polygon class="s-accent-fonce" points="120,250 148,226 176,250" />
+          <rect class="s-texte" x="142" y="262" width="12" height="16" />
+
+          <!-- Colline de devant et champ -->
+          <path class="s-herbe" d="M0 325 C 160 290, 330 300, 470 322 C 600 342, 700 300, 800 305 L800 360 L0 360 Z" />
+          <path class="s-champ" d="M0 348 C 220 332, 520 338, 800 345 L800 360 L0 360 Z" />
+
+          <!-- Une bulle « ? » cachée dans l'herbe, comme sur le futur site -->
+          <circle class="s-accent-fonce s-bulle" cx="420" cy="312" r="15" />
+          <text class="s-bulle-texte" x="420" y="319" text-anchor="middle">?</text>
+        </svg>
+      </section>
+
+      <!-- 3. Typographie : la même maquette avec 4 polices de titre ; le texte courant est en Nunito -->
+      <section class="section">
+        <h2>Polices de titre</h2>
+        <p class="intro">
+          La police des titres donne la personnalité du site. Pour le texte courant, toutes les
+          propositions utilisent <strong>Nunito</strong>, ronde et très lisible.
+        </p>
+
+        <div class="essais">
+          <article class="essai" style="--police-essai: 'Fredoka', sans-serif">
+            <p class="essai-etiquette">A · Fredoka</p>
+            <p class="essai-titre">Le Bestiaire des Pyrénées</p>
+            <div class="essai-carte">
+              <span class="essai-bulle">?</span>
+              <div>
+                <p class="essai-nom">Marmotte des Alpes</p>
+                <p class="essai-texte">
+                  <strong>Le saviez-vous ?</strong> Elle hiberne près de six mois par an,
+                  blottie avec toute sa famille au fond de son terrier.
+                </p>
+              </div>
+            </div>
+            <button class="essai-bouton" type="button">Débuter l'aventure</button>
+          </article>
+
+          <article class="essai" style="--police-essai: 'Baloo 2', sans-serif">
+            <p class="essai-etiquette">B · Baloo 2</p>
+            <p class="essai-titre">Le Bestiaire des Pyrénées</p>
+            <div class="essai-carte">
+              <span class="essai-bulle">?</span>
+              <div>
+                <p class="essai-nom">Marmotte des Alpes</p>
+                <p class="essai-texte">
+                  <strong>Le saviez-vous ?</strong> Elle hiberne près de six mois par an,
+                  blottie avec toute sa famille au fond de son terrier.
+                </p>
+              </div>
+            </div>
+            <button class="essai-bouton" type="button">Débuter l'aventure</button>
+          </article>
+
+          <article class="essai" style="--police-essai: 'Lilita One', sans-serif">
+            <p class="essai-etiquette">C · Lilita One</p>
+            <p class="essai-titre">Le Bestiaire des Pyrénées</p>
+            <div class="essai-carte">
+              <span class="essai-bulle">?</span>
+              <div>
+                <p class="essai-nom">Marmotte des Alpes</p>
+                <p class="essai-texte">
+                  <strong>Le saviez-vous ?</strong> Elle hiberne près de six mois par an,
+                  blottie avec toute sa famille au fond de son terrier.
+                </p>
+              </div>
+            </div>
+            <button class="essai-bouton" type="button">Débuter l'aventure</button>
+          </article>
+
+          <article class="essai" style="--police-essai: 'Grandstander', sans-serif">
+            <p class="essai-etiquette">D · Grandstander</p>
+            <p class="essai-titre">Le Bestiaire des Pyrénées</p>
+            <div class="essai-carte">
+              <span class="essai-bulle">?</span>
+              <div>
+                <p class="essai-nom">Marmotte des Alpes</p>
+                <p class="essai-texte">
+                  <strong>Le saviez-vous ?</strong> Elle hiberne près de six mois par an,
+                  blottie avec toute sa famille au fond de son terrier.
+                </p>
+              </div>
+            </div>
+            <button class="essai-bouton" type="button">Débuter l'aventure</button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/scripts/charte-graphique.js"></script>
+  </body>
+</html>

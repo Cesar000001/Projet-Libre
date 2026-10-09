@@ -1,0 +1,224 @@
+/* Styles de la page de travail "charte graphique" */
+@import './variables.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: var(--texte);
+  background: var(--ciel-clair);
+  line-height: 1.5;
+}
+
+.entete,
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.entete {
+  padding-top: 2.5rem;
+}
+
+.entete h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2.25rem;
+}
+
+.entete p {
+  margin: 0;
+  color: var(--texte-doux);
+}
+
+.section {
+  margin: 2.5rem 0;
+}
+
+.section h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.intro {
+  margin: -0.5rem 0 1.25rem;
+  color: var(--texte-doux);
+}
+
+/* ----- Palette ----- */
+
+.palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.famille {
+  padding: 1.25rem;
+  background: var(--nuage);
+  border-radius: 1.25rem;
+}
+
+.famille h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.famille p {
+  margin: 0.15rem 0 1rem;
+  font-size: 0.9rem;
+  color: var(--texte-doux);
+}
+
+.pastilles {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pastille {
+  flex: 1;
+  display: grid;
+  gap: 0.15rem;
+  font-size: 0.8rem;
+}
+
+.pastille-couleur {
+  height: 4rem;
+  border-radius: 0.75rem;
+  /* Fin contour pour distinguer les couleurs très claires du fond */
+  box-shadow: inset 0 0 0 1px rgb(31 51 71 / 0.1);
+}
+
+.pastille-hex {
+  color: var(--texte-doux);
+}
+
+/* ----- Mini-paysage : chaque classe applique une couleur de la palette ----- */
+
+.scene {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+}
+
+.s-ciel { fill: var(--ciel); }
+.s-soleil { fill: var(--champ); }
+.s-nuage { fill: var(--nuage); }
+.s-nuage-ombre { fill: var(--nuage-ombre); }
+.s-herbe-clair { fill: var(--herbe-clair); }
+.s-herbe { fill: var(--herbe); }
+.s-herbe-fonce { fill: var(--herbe-fonce); }
+.s-champ { fill: var(--champ); }
+.s-roche-clair { fill: var(--roche-clair); }
+.s-roche { fill: var(--roche); }
+.s-roche-fonce { fill: var(--roche-fonce); }
+.s-accent-fonce { fill: var(--accent-fonce); }
+.s-texte { fill: var(--texte); }
+
+.s-bulle {
+  stroke: var(--nuage);
+  stroke-width: 3;
+}
+
+.s-bulle-texte {
+  fill: var(--nuage);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ----- Essais de polices : chaque carte définit --police-essai ----- */
+
+.essais {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+  gap: 1rem;
+}
+
+.essai {
+  /* Pas de faux gras : si une police n'a pas de version grasse, on garde sa forme d'origine */
+  font-synthesis: none;
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  padding: 1.5rem;
+  background: var(--nuage);
+  border-radius: 1.25rem;
+}
+
+.essai p {
+  margin: 0;
+}
+
+.essai-etiquette {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--texte-doux);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.essai-titre {
+  font-family: var(--police-essai);
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.essai-carte {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  padding: 1rem;
+  background: var(--champ-clair);
+  border-radius: 1rem;
+}
+
+.essai-bulle {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  font-family: var(--police-essai);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--nuage);
+  background: var(--accent-fonce);
+  border: 3px solid var(--nuage);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--accent-fonce);
+}
+
+.essai-nom {
+  font-family: var(--police-essai);
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.essai-texte {
+  font-size: 0.95rem;
+}
+
+.essai-bouton {
+  justify-self: start;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--police-essai);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--texte);
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 0 var(--accent-fonce);
+  cursor: pointer;
+}
