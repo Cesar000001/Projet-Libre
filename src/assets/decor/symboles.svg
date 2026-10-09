@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="symboles" width="0" height="0" aria-hidden="true" focusable="false">
+  <!-- Formes réutilisées dans tout le décor avec <use href="#..." />.
+       Chaque forme est dessinée autour du point (0, 0) : on la place ensuite où on veut. -->
+  <defs>
+    <!-- Nuage : trois bosses posées sur une base plate -->
+    <g id="forme-nuage">
+      <circle cx="-60" cy="10" r="35" />
+      <circle cx="-8" cy="-15" r="50" />
+      <circle cx="50" cy="5" r="40" />
+      <rect x="-60" y="10" width="110" height="35" />
+    </g>
+
+    <!-- Sapin vu de loin : un simple triangle (le point 0,0 est le pied de l'arbre) -->
+    <polygon id="sapin" points="0,-58 17,0 -17,0" />
+
+    <!-- Arbre feuillu : tronc, feuillage et reflet de lumière -->
+    <g id="arbre">
+      <rect class="c-bois" x="-7" y="-34" width="14" height="36" rx="4" />
+      <circle class="c-herbe-fonce" cx="0" cy="-66" r="42" />
+      <circle class="c-herbe" cx="-13" cy="-78" r="22" />
+    </g>
+
+    <!-- Touffe de hautes herbes : trois brins (le point 0,0 est la base) -->
+    <g id="touffe">
+      <path d="M-16 0 C -18 -28 -28 -48 -40 -64 C -20 -50 -10 -30 -4 0 Z" />
+      <path d="M-7 0 C -5 -40 -3 -70 0 -92 C 4 -70 6 -40 8 0 Z" />
+      <path d="M5 0 C 9 -30 19 -50 36 -68 C 24 -46 18 -26 17 0 Z" />
+    </g>
+
+    <!-- Botte de foin ronde, vue de face -->
+    <g id="botte">
+      <circle class="c-champ-fonce" r="28" />
+      <circle class="trait-champ-clair" r="18" fill="none" />
+      <circle class="c-champ-clair" r="7" />
+    </g>
+
+    <!-- Petite fleur : un cœur jaune entouré d'un pétale rond (couleur donnée par la classe du <use>) -->
+    <g id="fleur">
+      <circle r="6" />
+      <circle class="c-champ" r="2.5" />
+    </g>
+  </defs>
+</svg>

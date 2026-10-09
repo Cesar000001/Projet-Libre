@@ -1,0 +1,89 @@
+/* L'introduction : un panneau posé sur le ciel, et l'indice qui invite à grimper */
+
+.intro {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  padding: clamp(1.5rem, 9vh, 6rem) 1rem 0;
+}
+
+/* L'attribut hidden doit gagner sur le display: grid ci-dessus */
+.intro[hidden] {
+  display: none;
+}
+
+.intro-panneau {
+  max-width: 34rem;
+  padding: 2rem 2rem 2.25rem;
+  text-align: center;
+  background: var(--nuage);
+  border-radius: 2rem;
+  /* Ombre "plate" sous le panneau, comme une carte posée sur le décor */
+  box-shadow:
+    0 10px 0 var(--nuage-ombre),
+    0 24px 40px rgb(31 51 71 / 0.18);
+  /* Caché au départ : GSAP le fait apparaître pendant l'animation */
+  visibility: hidden;
+}
+
+.intro-titre {
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+/* Les mots ne se coupent pas ; les lettres peuvent bouger une par une */
+.intro-titre .mot {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.intro-titre .lettre {
+  display: inline-block;
+}
+
+.intro-texte {
+  margin: 1rem 0 1.75rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--texte-doux);
+}
+
+/* Le bouton est dans un conteneur : GSAP anime le conteneur, le CSS anime le bouton au survol */
+.intro-action {
+  display: inline-block;
+}
+
+/* ----- Indice "Fais défiler pour grimper" ----- */
+
+.indice {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  translate: -50% 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.6rem 1.2rem;
+  font-family: var(--police-titre);
+  font-weight: 600;
+  white-space: nowrap;
+  background: var(--nuage);
+  border-radius: 999px;
+  box-shadow: 0 5px 0 var(--nuage-ombre);
+  visibility: hidden;
+}
+
+.indice svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

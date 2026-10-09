@@ -11,6 +11,7 @@ const familles = [
   { nom: 'Herbe', role: 'Prairies, arbres, feuillages', variables: ['--herbe-clair', '--herbe', '--herbe-fonce'] },
   { nom: 'Champs', role: 'Cultures de la plaine, fleurs, soleil', variables: ['--champ-clair', '--champ', '--champ-fonce'] },
   { nom: 'Roche', role: 'Falaises, rochers, grottes', variables: ['--roche-clair', '--roche', '--roche-fonce'] },
+  { nom: 'Bois', role: 'Maisons, clôtures, panneaux, troncs', variables: ['--bois-clair', '--bois', '--bois-fonce'] },
   { nom: 'Accent', role: 'Bulles « ? » et boutons', variables: ['--accent', '--accent-fonce'] },
   { nom: 'Texte', role: 'Titres, textes et contours', variables: ['--texte', '--texte-doux'] },
 ]

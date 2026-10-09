@@ -1,0 +1,92 @@
+/* Le décor : une scène fixe qui remplit l'écran, et ses calques SVG empilés.
+   Les classes c-... donnent à chaque forme une couleur de la palette (variables.css). */
+
+.scene {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  /* Le ciel : plus soutenu en haut, plus clair vers l'horizon */
+  background: linear-gradient(to bottom, var(--ciel) 0%, var(--ciel-clair) 70%);
+}
+
+/* Le fichier des symboles ne s'affiche pas : il sert seulement de réserve de formes */
+.symboles {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Chaque calque couvre toute la scène ; ils sont empilés dans l'ordre du HTML */
+.calque {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Écran en hauteur (téléphone) : le paysage n'occupe que le bas de l'écran,
+   ce qui le rend un peu plus petit et en montre davantage en largeur */
+@media (max-aspect-ratio: 3/4) {
+  .calque {
+    inset: auto 0 0;
+    height: 75%;
+  }
+}
+
+/* ----- Remplissages ----- */
+.c-ciel-clair { fill: var(--ciel-clair); }
+.c-nuage { fill: var(--nuage); }
+.c-nuage-ombre { fill: var(--nuage-ombre); }
+.c-herbe-clair { fill: var(--herbe-clair); }
+.c-herbe { fill: var(--herbe); }
+.c-herbe-fonce { fill: var(--herbe-fonce); }
+.c-champ-clair { fill: var(--champ-clair); }
+.c-champ { fill: var(--champ); }
+.c-champ-fonce { fill: var(--champ-fonce); }
+.c-roche-clair { fill: var(--roche-clair); }
+.c-roche { fill: var(--roche); }
+.c-roche-fonce { fill: var(--roche-fonce); }
+.c-bois-clair { fill: var(--bois-clair); }
+.c-bois { fill: var(--bois); }
+.c-bois-fonce { fill: var(--bois-fonce); }
+.c-accent { fill: var(--accent); }
+.c-accent-fonce { fill: var(--accent-fonce); }
+
+/* ----- Contours ----- */
+.trait-bois-fonce {
+  stroke: var(--bois-fonce);
+  stroke-width: 3;
+}
+
+.trait-champ-clair {
+  stroke: var(--champ-clair);
+  stroke-width: 3;
+}
+
+/* Sillons et rangées : des lignes sans remplissage */
+.trait-herbe,
+.trait-champ-fonce {
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.trait-herbe { stroke: var(--herbe); }
+.trait-champ-fonce { stroke: var(--champ-fonce); }
+
+/* ----- Détails ----- */
+.oiseau {
+  fill: none;
+  stroke: var(--texte-doux);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.panneau-texte {
+  font-family: var(--police-titre);
+  font-size: 15px;
+  font-weight: 600;
+  fill: var(--texte);
+}

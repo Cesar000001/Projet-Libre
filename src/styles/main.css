@@ -1,6 +1,8 @@
 /* Feuille de style principale.
-   Les couleurs et les polices viennent de variables.css (à importer en premier). */
+   Elle importe d'abord les variables (couleurs, polices), puis les styles de chaque partie du site. */
 @import './variables.css';
+@import './decor.css';
+@import './intro.css';
 
 /* Les largeurs incluent les bordures et marges intérieures (plus simple à calculer) */
 *,
@@ -9,21 +11,53 @@
   box-sizing: border-box;
 }
 
+/* Pendant l'introduction, on ne peut pas faire défiler la page */
+html.defilement-bloque {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   font-family: var(--police-texte);
   color: var(--texte);
-  /* Fond provisoire : le ciel, plus clair vers l'horizon */
-  background: linear-gradient(to bottom, var(--ciel), var(--ciel-clair));
+  background: var(--ciel-clair);
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-family: var(--police-titre);
 }
 
-/* Centre le titre au milieu de l'écran, le temps de vérifier que tout fonctionne */
-main {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
+/* ----- Bouton principal (orange, avec une ombre plate qui s'enfonce au clic) ----- */
+
+.bouton {
+  padding: 0.85rem 1.8rem;
+  font-family: var(--police-titre);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--texte);
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 5px 0 var(--accent-fonce);
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+.bouton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 var(--accent-fonce);
+}
+
+.bouton:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 var(--accent-fonce);
+}
+
+.bouton:focus-visible {
+  outline: 3px solid var(--texte);
+  outline-offset: 4px;
 }

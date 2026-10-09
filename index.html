@@ -12,8 +12,29 @@
     <title>Le Bestiaire des Pyrénées</title>
   </head>
   <body>
+    <!-- Décor : rempli par scene.js avec les calques SVG de src/assets/decor/ -->
+    <div class="scene" aria-hidden="true"></div>
+
     <main>
-      <h1 class="titre-principal">Le Bestiaire des Pyrénées</h1>
+      <!-- Introduction : présentation du site et bouton de départ -->
+      <section class="intro" aria-labelledby="titre-site">
+        <div class="intro-panneau">
+          <h1 id="titre-site" class="intro-titre">Le Bestiaire des Pyrénées</h1>
+          <p class="intro-texte">
+            Grimpe de la vallée jusqu'au sommet de l'Aneto, à 3&nbsp;404&nbsp;m, et pars à la
+            rencontre des animaux qui vivent à chaque étage de la montagne.
+          </p>
+          <div class="intro-action">
+            <button class="bouton" type="button">Débuter l'aventure</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Indice affiché après l'introduction -->
+      <p class="indice">
+        Fais défiler pour grimper
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+      </p>
     </main>
 
     <!-- Point d'entrée JavaScript : Vite part de ce fichier pour charger tout le reste -->

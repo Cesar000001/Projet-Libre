@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMax slice" class="calque calque-montagnes" aria-hidden="true" focusable="false">
+  <!-- Calque des montagnes : chaîne lointaine, massif de l'Aneto, lisière de forêt -->
+
+  <!-- Chaîne lointaine, plus claire car plus loin -->
+  <g class="chaine-lointaine">
+    <path class="c-roche-clair" d="M0 720 L0 560 L90 480 L170 530 L300 400 L420 500 L520 440 L600 480 L700 430 L800 470 L900 420 L1010 470 L1120 380 L1230 480 L1340 410 L1460 490 L1600 440 L1600 720 Z" />
+    <polygon class="c-nuage" points="300,400 336,430 320,426 308,438 294,426 270,430" />
+    <polygon class="c-nuage" points="1120,380 1158,415 1142,410 1128,422 1112,410 1077,415" />
+    <polygon class="c-nuage" points="1340,410 1385,440 1368,436 1352,448 1336,436 1293,440" />
+  </g>
+
+  <!-- Massif de l'Aneto : le sommet principal au centre, un second sommet à droite -->
+  <g class="massif">
+    <path class="c-roche" d="M360 720 L520 500 L600 430 L650 395 L705 425 L820 170 L935 325 L985 300 L1060 245 L1165 415 L1230 520 L1300 720 Z" />
+
+    <!-- Faces à l'ombre (côté droit de chaque sommet) -->
+    <polygon class="c-roche-fonce" points="650,395 705,425 700,560 660,720 620,720 655,520" />
+    <polygon class="c-roche-fonce" points="820,170 935,325 960,420 930,720 850,720 840,450" />
+    <polygon class="c-roche-fonce" points="1060,245 1165,415 1230,520 1300,720 1120,720 1100,480" />
+
+    <!-- Neige des sommets, avec une ombre bleutée côté droit -->
+    <polygon class="c-nuage" points="820,170 890,265 868,254 852,276 834,258 816,282 798,262 777,265" />
+    <polygon class="c-nuage-ombre" points="820,170 890,265 868,254 852,276 838,262" />
+    <polygon class="c-nuage" points="1060,245 1084,285 1070,279 1056,293 1040,279 1005,285" />
+    <polygon class="c-nuage" points="650,395 677,410 666,412 655,422 643,412 621,415" />
+
+    <!-- Glacier de l'Aneto, le plus grand des Pyrénées, sur la face nord -->
+    <polygon class="c-nuage" points="852,276 868,254 890,265 915,300 925,360 905,345 895,400 880,370 865,420 858,350" />
+    <polygon class="c-nuage-ombre" points="890,265 915,300 925,360 905,345 900,300" />
+  </g>
+
+  <!-- Lisière de forêt au pied de la montagne -->
+  <g class="foret">
+    <path class="c-herbe-fonce" d="M0 700 C 180 650, 360 690, 560 665 C 760 640, 960 690, 1160 660 C 1360 630, 1480 680, 1600 660 L1600 1000 L0 1000 Z" />
+    <!-- Sapins posés le long de la lisière -->
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(8 712) scale(1.02)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(45 703) scale(0.88)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(90 699) scale(0.79)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(137 689) scale(0.98)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(188 685) scale(1.11)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(233 688) scale(0.88)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(270 687) scale(1.06)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(308 691) scale(0.78)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(363 688) scale(0.82)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(419 687) scale(0.85)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(465 685) scale(1.12)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(502 684) scale(1.29)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(541 680) scale(1.05)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(579 676) scale(1.18)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(621 677) scale(0.79)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(660 672) scale(1.24)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(699 671) scale(1.08)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(750 670) scale(1.11)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(789 671) scale(1.00)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(824 678) scale(0.98)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(872 678) scale(1.28)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(916 681) scale(1.02)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(968 683) scale(1.00)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(1008 686) scale(0.88)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(1045 686) scale(0.90)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(1098 684) scale(1.28)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(1151 677) scale(1.16)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(1197 668) scale(0.76)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(1239 665) scale(0.87)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(1288 662) scale(1.16)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(1343 664) scale(0.75)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(1390 665) scale(0.99)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(1445 676) scale(1.00)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(1492 674) scale(1.01)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(1544 677) scale(1.24)" />
+    <use href="#sapin" class="c-herbe-fonce" transform="translate(1578 679) scale(0.83)" />
+  </g>
+</svg>

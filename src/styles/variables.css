@@ -27,6 +27,11 @@
   --roche: #8F99AB;
   --roche-fonce: #5E6880;
 
+  /* Bois : maisons, clôtures, panneaux, troncs d'arbres */
+  --bois-clair: #E7B57A;
+  --bois: #B8743D;
+  --bois-fonce: #8A5530;
+
   /* Accent : bulles « ? » et boutons, pour ressortir sur le vert et le bleu */
   --accent: #FF7B54;
   --accent-fonce: #E8572F;
@@ -35,7 +40,7 @@
   --texte: #1F3347;
   --texte-doux: #4A5D70;
 
-  /* Polices : provisoires, en attendant le choix final */
-  --police-titre: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --police-texte: system-ui, 'Segoe UI', Roboto, sans-serif;
+  /* Polices : Fredoka pour les titres, Nunito pour le texte (installées avec npm) */
+  --police-titre: 'Fredoka Variable', system-ui, sans-serif;
+  --police-texte: 'Nunito Variable', system-ui, sans-serif;
 }

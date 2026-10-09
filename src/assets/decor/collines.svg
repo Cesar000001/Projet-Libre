@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMax slice" class="calque calque-collines" aria-hidden="true" focusable="false">
+  <!-- Calque des collines : entre la forêt de la montagne et la plaine -->
+
+  <path class="c-herbe-clair" d="M0 780 C 220 720, 420 730, 640 770 C 860 810, 1060 730, 1300 745 C 1450 755, 1540 735, 1600 738 L1600 1000 L0 1000 Z" />
+
+  <!-- Quelques arbres feuillus sur les crêtes -->
+  <use href="#arbre" transform="translate(150 756) scale(0.75)" />
+  <use href="#arbre" transform="translate(215 748) scale(0.6)" />
+  <use href="#arbre" transform="translate(1235 756) scale(0.7)" />
+  <use href="#arbre" transform="translate(1295 752) scale(0.55)" />
+  <use href="#arbre" transform="translate(1455 752) scale(0.65)" />
+</svg>
